@@ -1,0 +1,27 @@
+{
+  "name": "digicraft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigicraftSoftware/landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigicraftSoftware/landing-page/issues"
+  },
+  "homepage": "https://github.com/DigicraftSoftware/landing-page#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
