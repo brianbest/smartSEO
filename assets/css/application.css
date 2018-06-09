@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800");
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  margin: 0; }
+  margin: 0;
+  color: #4A4A4A; }
 
 h2 {
   text-transform: uppercase;
@@ -13,23 +14,26 @@ h2 {
       font-size: 6.5vw; } }
 
 button {
-  background: #ffffff;
-  font-weight: 400;
+  background: linear-gradient(to left, #FAD900, #f76b10);
+  font-weight: normal;
+  color: #fff;
   text-transform: uppercase;
-  border: 5px solid #30343F;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
   border-radius: 100px;
-  padding: 8px 30px; }
+  padding: 18px 30px;
+  letter-spacing: 0.65px; }
 
 .site-header {
   display: grid;
-  grid-template-columns: auto auto auto 445px;
+  grid-template-columns: auto auto auto auto;
   position: fixed;
   max-width: 100%;
   width: 100%;
   z-index: 10;
-  padding: 81px 93px;
-  box-sizing: border-box; }
+  padding: 41px 93px 30px 93px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
   @media screen and (max-width: 755px) {
     .site-header {
       grid-template-columns: auto;
@@ -42,13 +46,15 @@ button {
       grid-template-columns: 100%; } }
   .site-header .header-logo {
     background-image: url("/assets/images/logo.png");
-    width: 160px;
-    height: 68px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 142px;
+    height: 34px;
     margin-right: 50px; }
   .site-header .navigation {
     grid-column: 4;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 23px;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -63,60 +69,40 @@ button {
     .site-header .navigation .navigation-wrapper {
       display: flex;
       justify-content: center;
-      background: #fff;
-      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.26); }
+      background: transparent;
+      color: #fff; }
     .site-header .navigation .navigation-item {
       display: inline-block;
-      margin-right: 12px;
+      margin-right: 30px;
+      letter-spacing: 0.18px;
       padding: 10px 0; }
       .site-header .navigation .navigation-item:last-child {
         margin-right: 0; }
 
 .hero {
   width: 100%;
-  min-height: 88vh;
+  min-height: 50vh;
   position: relative;
-  box-sizing: border-box; }
-  @media screen and (max-width: 755px) {
-    .hero {
-      min-height: 50vh; } }
+  box-sizing: border-box;
+  color: #fff; }
   .hero h2 {
-    color: #fff;
-    line-height: 0.7;
-    letter-spacing: 1px; }
+    line-height: 1;
+    font-size: 45px;
+    letter-spacing: 0.35px;
+    margin-bottom: 0; }
     .hero h2 b {
       color: #30343F; }
-  .hero button {
-    font-size: 1em;
-    letter-spacing: 1.5px; }
+  .hero h3 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 10px; }
   .hero .hero-image {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 100%; }
-    .hero .hero-image:before, .hero .hero-image:after {
-      position: absolute;
-      top: 0;
-      content: " ";
-      width: 60%;
-      height: 100%; }
-      @media only screen and (max-width: 999px) {
-        .hero .hero-image:before, .hero .hero-image:after {
-          width: 100%; } }
-    .hero .hero-image:before {
-      left: 0;
-      background: #DB5461;
-      z-index: 2;
-      clip-path: polygon(0 0, 80% 0%, 100% 100%, 0 100%); }
-      @media only screen and (max-width: 999px) {
-        .hero .hero-image:before {
-          clip-path: none;
-          opacity: 0.9; } }
-    .hero .hero-image:after {
-      background: url("/assets/images/background_header.jpg");
-      background-size: cover;
-      right: 0;
-      z-index: 1; }
+    height: 100%;
+    background: url("/assets/images/background.png");
+    background-size: cover; }
   .hero .hero-content {
     position: absolute;
     z-index: 2;
@@ -133,7 +119,7 @@ button {
         width: 100%; } }
 
 .timbits {
-  background: #30343F; }
+  background: #fff; }
   .timbits .timbits-collection {
     margin: 0 auto;
     max-width: 1200px;
@@ -151,8 +137,8 @@ button {
       .timbits .timbits-collection {
         grid-template-columns: auto; } }
   .timbits .timbit {
-    color: #fff;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     @media only screen and (max-width: 999px) and (min-width: 400px) {
       .timbits .timbit {
         margin-bottom: 20px; } }
@@ -164,6 +150,17 @@ button {
     @media only screen and (max-width: 400px) {
       .timbits .timbit {
         width: 100%; } }
+    .timbits .timbit header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      margin-bottom: 20px; }
+      .timbits .timbit header h3 {
+        margin: 0; }
+    .timbits .timbit .info {
+      max-width: 350px;
+      margin: 0 auto; }
     .timbits .timbit .icon {
       width: 32px;
       height: 32px;
@@ -173,6 +170,7 @@ button {
     .timbits .timbit h5 {
       margin: 0; }
     .timbits .timbit p {
+      text-align: center;
       margin: 0;
       font-weight: 100;
       opacity: 0.7; }
@@ -181,16 +179,105 @@ button {
         font-size: 30px; }
       .timbits .timbit p {
         font-size: 22px; } }
-    .timbits .timbit.timbit-locations .icon {
-      width: 32px;
-      height: 45px;
-      margin-right: 28px;
-      background-image: url("/assets/images/location.svg"); }
+    .timbits .timbit.timbit-seo .icon {
+      width: 48px;
+      height: 48px;
+      background-image: url("/assets/images/icon_seo.png"); }
     .timbits .timbit.timbit-clients .icon {
-      width: 43px;
-      height: 43px;
-      background-image: url("/assets/images/customer.png"); }
+      width: 36px;
+      height: 36px;
+      background-image: url("/assets/images/icon_webdesign.png"); }
     .timbits .timbit.timbit-years .icon {
-      width: 44px;
-      height: 44px;
-      background-image: url("/assets/images/experience.png"); }
+      width: 40px;
+      height: 40px;
+      background-image: url("/assets/images/icon_ppc.png"); }
+
+.horizontal-cta {
+  background: #eee;
+  padding: 10px 0; }
+  .horizontal-cta .horizontal-cta-inner {
+    display: flex;
+    justify-content: center; }
+  .horizontal-cta h4 {
+    font-size: 25px;
+    font-weight: normal;
+    opacity: 0.85; }
+  .horizontal-cta .content, .horizontal-cta .action {
+    display: inline-block; }
+  .horizontal-cta .content {
+    margin-right: 50px; }
+  .horizontal-cta .action button {
+    margin-top: 20px; }
+  .horizontal-cta .cta {
+    font-size: 17px; }
+
+.testimony {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px; }
+  .testimony button {
+    display: block;
+    margin: 0 auto; }
+  .testimony .testimony-card {
+    display: block;
+    max-width: 832px;
+    margin: 0 auto;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin-bottom: 50px; }
+  .testimony header {
+    text-transform: uppercase;
+    text-align: center; }
+    .testimony header h3 {
+      font-weight: 400; }
+    .testimony header:after {
+      content: " ";
+      width: 40px;
+      height: 6px;
+      border-radius: 2.5px;
+      background: #005c90;
+      display: block;
+      margin: 0 auto; }
+  .testimony ul {
+    list-style: none; }
+  .testimony li {
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 55px; }
+  .testimony .quote {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 80px auto; }
+    .testimony .quote .quote-image {
+      width: 40px;
+      height: 35px;
+      background: url(/assets/images/quotation.png);
+      background-size: 100%;
+      background-repeat: no-repeat; }
+    .testimony .quote .quote-text p {
+      margin: 0;
+      letter-spacing: 1.32px;
+      line-height: 32px; }
+  .testimony .author {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    align-items: center; }
+    .testimony .author .author-image {
+      width: 76px;
+      height: 76px;
+      background: grey;
+      border-radius: 100px;
+      margin-right: 16px;
+      box-shadow: 0 1px 21px 0 rgba(0, 0, 0, 0.08);
+      background: url(/assets/images/user.png); }
+    .testimony .author .byline-name {
+      font-weight: 700;
+      font-size: 22px; }
+    .testimony .author .byline-title {
+      font-weight: 700;
+      color: grey;
+      font-size: 19px; }

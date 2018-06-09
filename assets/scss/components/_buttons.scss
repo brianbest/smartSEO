@@ -1,9 +1,11 @@
 button {
-  background: #ffffff;
-  font-weight: 400;
+  background: $orange-gradient;
+  font-weight: normal;
+  color: #fff;
   text-transform: uppercase;
-  border: 5px solid #30343F;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  border: none;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
   border-radius: 100px;
-  padding: 8px 30px;
+  padding: 18px 30px;
+  letter-spacing: 0.65px;
 }

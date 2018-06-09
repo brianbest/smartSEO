@@ -1,0 +1,30 @@
+.horizontal-cta{
+  background: #eee;
+  padding: 10px 0;
+
+  .horizontal-cta-inner {
+    display: flex;
+    justify-content: center;
+  }
+  h4 {
+    font-size: 25px;
+    font-weight: normal;
+    opacity: 0.85;
+  }
+  .content, .action {
+    display: inline-block;
+  }
+
+  .content {
+    margin-right: 50px;
+  }
+  .action {
+    button {
+      margin-top: 20px;
+    }
+  }
+
+  .cta {
+    font-size: 17px;
+  }
+}

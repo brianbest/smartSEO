@@ -1,5 +1,5 @@
 .timbits{
-  background: $dark;
+  background: #fff;
   .timbits-collection {
     margin: 0 auto;
     max-width: 1200px;
@@ -19,8 +19,8 @@
     }
   }
   .timbit {
-    color: #fff;
     display: flex;
+    flex-direction: column;
 
     @include breakpoint('tablet'){
       margin-bottom: 20px;
@@ -35,23 +35,41 @@
       width: 100%;
 
     }
-    .icon {
+    header{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 50px;
+      margin-bottom: 20px;
 
+      h3 {
+        margin: 0;
+      }
+    }
+    .info{
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .icon {
       width: 32px;
       height: 32px;
       margin-right: 17px;
       background-repeat: no-repeat;
       background-size: contain;
     }
+
     h5 {
       margin: 0;
     }
 
     p{
+      text-align: center;
       margin: 0;
       font-weight: 100;
       opacity: 0.7;
     }
+
     @include breakpoint('tablet'){
       h5{
         font-size: 30px;
@@ -60,26 +78,25 @@
         font-size: 22px;
       }
     }
-    &.timbit-locations{
+    &.timbit-seo{
       .icon {
-        width: 32px;
-        height: 45px;
-        margin-right: 28px;
-        background-image: url('/assets/images/location.svg');
+        width: 48px;
+        height: 48px;
+        background-image: url('/assets/images/icon_seo.png');
       }
     }
     &.timbit-clients{
       .icon {
-        width: 43px;
-        height: 43px;
-        background-image: url('/assets/images/customer.png');
+        width: 36px;
+        height: 36px;
+        background-image: url('/assets/images/icon_webdesign.png');
       }
     }
     &.timbit-years{
       .icon {
-        width: 44px;
-        height: 44px;
-        background-image: url('/assets/images/experience.png');
+        width: 40px;
+        height: 40px;
+        background-image: url('/assets/images/icon_ppc.png');
       }
     }
   }

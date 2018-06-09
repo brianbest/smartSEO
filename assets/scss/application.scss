@@ -1,11 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 @import 'variables/breakpoints';
+@import 'variables/header';
 @import 'mixins/breakpoints';
 
+$body-text-color: #4A4A4A;
+$orange-light: #FAD900;
+$orange-dark: #f76b10;
+$orange-gradient: linear-gradient(to left, $orange-light, $orange-dark);
+$blue-light: #005c90;
+$blue-dark: #363790;
+$blue-gradient: linear-gradient(to left, $blue-dark, $blue-light);
+$red-light: #f37120;
+$red: #e94000;
+$red-dark: #8a2380;
+
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   margin: 0;
+  color: $body-text-color;
 }
 
 h2 {
@@ -17,9 +30,10 @@ h2 {
   }
 }
 
-$pinkred: #DB5461;
-$dark: #30343F;
+
 @import 'components/buttons';
 @import 'components/header';
 @import 'components/hero-banner';
 @import 'components/timbits';
+@import 'components/horizontal-cta';
+@import 'components/testimony';
