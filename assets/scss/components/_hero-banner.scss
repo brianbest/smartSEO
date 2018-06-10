@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  min-height: 50vh;
+  min-height: 60vh;
   position: relative;
   box-sizing: border-box;
   color: #fff;
@@ -13,12 +13,18 @@
     b {
       color: #30343F;
     }
+    @media screen and (max-width: 755px){
+      font-size: 35px;
+    }
   }
 
   h3 {
     font-size: 40px;
     font-weight: 300;
     margin-top: 10px;
+    @media screen and (max-width: 755px){
+      font-size: 30px;
+    }
   }
   .hero-image {
     position: absolute;

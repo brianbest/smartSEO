@@ -27,19 +27,21 @@ button {
 .site-header {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  position: fixed;
+  position: absolute;
   max-width: 100%;
   width: 100%;
   z-index: 10;
-  padding: 41px 93px 30px 93px;
+  padding: 35px 93px 25px 93px;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  @media screen and (max-width: 999px) {
+    .site-header {
+      padding: 20px 30px; } }
   @media screen and (max-width: 755px) {
     .site-header {
       grid-template-columns: auto;
       grid-template-rows: auto auto;
-      grid-row-gap: 20px;
-      padding: 41px 30px; } }
+      grid-row-gap: 20px; } }
   @media screen and (max-width: 455px) {
     .site-header {
       padding: 21px 10px;
@@ -51,6 +53,9 @@ button {
     width: 142px;
     height: 34px;
     margin-right: 50px; }
+    @media screen and (max-width: 755px) {
+      .site-header .header-logo {
+        margin: 0 auto; } }
   .site-header .navigation {
     grid-column: 4;
     font-weight: 700;
@@ -59,6 +64,9 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column; }
+    @media screen and (max-width: 999px) {
+      .site-header .navigation {
+        font-size: 15px; } }
     @media screen and (max-width: 755px) {
       .site-header .navigation {
         grid-row: 2;
@@ -81,7 +89,7 @@ button {
 
 .hero {
   width: 100%;
-  min-height: 50vh;
+  min-height: 60vh;
   position: relative;
   box-sizing: border-box;
   color: #fff; }
@@ -92,10 +100,16 @@ button {
     margin-bottom: 0; }
     .hero h2 b {
       color: #30343F; }
+    @media screen and (max-width: 755px) {
+      .hero h2 {
+        font-size: 35px; } }
   .hero h3 {
     font-size: 40px;
     font-weight: 300;
     margin-top: 10px; }
+    @media screen and (max-width: 755px) {
+      .hero h3 {
+        font-size: 30px; } }
   .hero .hero-image {
     position: absolute;
     z-index: 1;
@@ -198,14 +212,25 @@ button {
   .horizontal-cta .horizontal-cta-inner {
     display: flex;
     justify-content: center; }
+    @media screen and (max-width: 999px) {
+      .horizontal-cta .horizontal-cta-inner {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px; } }
   .horizontal-cta h4 {
     font-size: 25px;
     font-weight: normal;
     opacity: 0.85; }
+    @media screen and (max-width: 999px) {
+      .horizontal-cta h4 {
+        margin-bottom: 0; } }
   .horizontal-cta .content, .horizontal-cta .action {
     display: inline-block; }
   .horizontal-cta .content {
     margin-right: 50px; }
+    @media screen and (max-width: 999px) {
+      .horizontal-cta .content {
+        margin-right: 0; } }
   .horizontal-cta .action button {
     margin-top: 20px; }
   .horizontal-cta .cta {
@@ -215,7 +240,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 50px; }
+  margin-top: 50px;
+  padding: 20px; }
   .testimony button {
     display: block;
     margin: 0 auto; }
@@ -241,22 +267,32 @@ button {
       display: block;
       margin: 0 auto; }
   .testimony ul {
-    list-style: none; }
+    list-style: none;
+    padding: 0; }
   .testimony li {
     display: grid;
     grid-template-columns: 80px auto;
     grid-template-rows: auto auto;
     grid-row-gap: 55px; }
+    @media screen and (max-width: 755px) {
+      .testimony li {
+        grid-template-columns: auto; } }
   .testimony .quote {
     grid-column: span 2;
     display: grid;
     grid-template-columns: 80px auto; }
+    @media screen and (max-width: 755px) {
+      .testimony .quote {
+        grid-template-columns: auto; } }
     .testimony .quote .quote-image {
       width: 40px;
       height: 35px;
       background: url(/assets/images/quotation.png);
       background-size: 100%;
       background-repeat: no-repeat; }
+      @media screen and (max-width: 755px) {
+        .testimony .quote .quote-image {
+          margin: 0 auto; } }
     .testimony .quote .quote-text p {
       margin: 0;
       letter-spacing: 1.32px;
@@ -281,3 +317,13 @@ button {
       font-weight: 700;
       color: grey;
       font-size: 19px; }
+
+.site-footer {
+  background: #E1DDDD;
+  color: #4A4A4A;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 50px; }
+  .site-footer h4 {
+    margin: 0;
+    font-weight: normal; }
